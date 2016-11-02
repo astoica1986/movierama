@@ -21,6 +21,7 @@ class UserRegistration
   private
 
   def _run
+    puts @auth_hash
     @ran and return
     uid = "%s|%s" % [
       @auth_hash['provider'],
@@ -34,6 +35,7 @@ class UserRegistration
       @user = User.create(
         uid:        uid, 
         name:       @auth_hash['info']['name'],
+        email:      @auth_hash['info']['email'],
         created_at: Time.current.utc.to_i
       )
       @created = true

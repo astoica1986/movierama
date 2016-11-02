@@ -12,6 +12,10 @@ class User < BaseModel
   attribute :token
   index     :token
 
+  attribute :email
+  index     :email
+  unique    :email
+  
   # Submitted movies
   collection :movies, :Movie
 end
