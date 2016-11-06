@@ -1,6 +1,6 @@
 class User < BaseModel
   include Ohm::Timestamps
-
+  
   attribute :name
 
   # Unique identifier for this user, in the form "{provider}|{provider-id}"
@@ -16,6 +16,9 @@ class User < BaseModel
   index     :email
   unique    :email
   
+  attribute :notifiable
+  index     :notifiable
+
   # Submitted movies
   collection :movies, :Movie
 end

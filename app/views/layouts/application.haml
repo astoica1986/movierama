@@ -22,6 +22,21 @@
             %span#email= current_user.email
             = link_to session_path, method: :delete do
               Log out
+            .row
+              .col-md-12
+                .alert.alert-info
+                  - if current_user.notifiable?
+                    You currently receive emails each time one of your videos is liked.
+                    = link_to user_notify_path(current_user), method: :delete,
+                                 id: "notify-status", class: "subscribed" do
+                      Please stop sending emails!
+                  - else
+                    You are not currently notified when one of your videos is liked
+                    = link_to user_notify_path(current_user), method: :post,
+                                  id: "notify-status", class: "unsubscribed"do
+                      Notify me!
+
+
         - else
           %a.navbar-right.btn.navbar-btn{ href: '/auth/github' }
             Log in

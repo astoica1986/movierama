@@ -36,7 +36,8 @@ class UserRegistration
         uid:        uid, 
         name:       @auth_hash['info']['name'],
         email:      @auth_hash['info']['email'],
-        created_at: Time.current.utc.to_i
+        created_at: Time.current.utc.to_i,
+        notifiable: "false"
       )
       @created = true
     end
