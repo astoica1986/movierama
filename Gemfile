@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.3.1'
 
 # App runner
 gem 'foreman'
@@ -29,7 +29,7 @@ gem 'draper'
 gem 'redis-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -65,3 +65,7 @@ group :test do
   gem 'poltergeist'    # Driver for PhantomJS headless browser
   gem 'capybara'       # DSL for browser control
 end
+
+#jobs
+gem 'sidekiq'
+

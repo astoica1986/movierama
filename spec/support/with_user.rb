@@ -9,7 +9,7 @@ module RspecSupportWithUser
         uid: '12345',
         info: {
           name: 'John McFoo',
-          email: 'john.smith@test.com'
+          email: 'john.smith@example.com'
         }
       )
     end

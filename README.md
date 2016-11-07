@@ -54,6 +54,13 @@ Run the application on the corresponding port:
 
 Then point your browser to https://127.0.0.1:24676
 
+Start sidekiq:
+bundle exec sidekiq --environment development -C config/sidekiq.yml
+
+Setting the mailer to use a dedicated provider was to much trouble. So I used Gmail instead.
+Please set a GMAIL_USER and GMAIL_PASS in your .env file and remember to allow access to less secure apps
+in your Gmail account.
+
 Enjoy!
 
 
@@ -72,3 +79,5 @@ If not, you'll need to get your own OAuth tokens from Github and edit
 So you know what to expect. This app's just a toy, remember?
 
 ![](https://dl.dropboxusercontent.com/spa/cbazgcyvth7jydp/-4eusn-o.png)
+
+
